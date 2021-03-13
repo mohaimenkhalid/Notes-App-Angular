@@ -1,0 +1,58 @@
+@import "../../main-styles";
+
+.note-card-container {
+  background: white;
+  border-radius: 5px;
+
+  box-shadow: 0px 2px 15px 2px rgba(black, 0.068);
+  transition: box-shadow 0.2s ease-out;
+
+  &:hover {
+    box-shadow: 0px 0px 0px 4px rgba(black, 0.068);
+    cursor: pointer;
+
+      .x-button {
+        transform: scale(1) !important;
+        opacity: 1 !important;
+        transition-delay: .35s;
+      }
+  }
+
+  .note-card-content {
+    padding: 25px;
+    margin-top: 1rem;
+    position: relative;
+
+    .note-card-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: $purple;
+    }
+
+    .x-button {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      height: 34px;
+      width: 34px;
+      background: rgba(239, 210, 210, 0.7);
+      border-radius: 4px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: red;
+      transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+      opacity: 0;
+      transform: scale(0.35);
+      &:hover {
+        background: rgba(239, 210, 210, 0.87);
+      }
+
+      &:active {
+        background: rgb(239, 210, 210);
+      }
+    }
+  }
+}
