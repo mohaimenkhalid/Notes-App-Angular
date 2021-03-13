@@ -54,5 +54,23 @@
         background: rgb(239, 210, 210);
       }
     }
+
+    .note-card-body {
+      position: relative;
+      max-height: 80px;
+      overflow: hidden;
+      color: #555555;
+
+      .fade-out-truncation {
+        position: absolute;
+        bottom: 0;
+        height: 50%;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(white, 0), rgba(white, 0.8) 50%, white 100%);
+        pointer-events: none;
+      }
+    }
+
+
   }
 }
