@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NoteCardComponent implements OnInit {
   @Input() title: string;
   @Input() body: string;
+  // tslint:disable-next-line:variable-name
+  @Input() viewLink: string;
   constructor() { }
 
   ngOnInit(): void {
