@@ -18,6 +18,7 @@
       [title]="note.title"
       [body]="note.body"
       [viewLink]="i"
+      (delete)="deleteNote(i)"
     >
     </app-note-card>
   </div>
