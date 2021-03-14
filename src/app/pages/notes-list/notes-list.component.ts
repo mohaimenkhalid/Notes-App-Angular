@@ -22,4 +22,18 @@ export class NotesListComponent implements OnInit {
     this.router.navigateByUrl('/');
   }
 
+  filter = (query: string) => {
+    query = query.toLowerCase().trim();
+    let allResults: Note[] = new Array<Note>();
+    let terms: string[] = query.split(' ');
+    terms = this.removeDuplicates(terms);
+
+  }
+
+  removeDuplicates(arr: Array<any>): Array<any> {
+    const uniqueResults: Set<any> = new Set<any>();
+    arr.forEach(item => uniqueResults.add(item));
+    return Array.from(uniqueResults);
+  }
+
 }
