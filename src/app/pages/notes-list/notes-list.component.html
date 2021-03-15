@@ -17,6 +17,7 @@
     <app-note-card
       *ngFor="let note of filteredNotes; index as i"
       [title]="note.title"
+      [@itemAnim]
       [body]="note.body"
       [viewLink]="generateLink(note)"
       (delete)="deleteNote(note)"
