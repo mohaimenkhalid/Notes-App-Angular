@@ -26,7 +26,6 @@ export class NotesListComponent implements OnInit {
   }
 
   filter = (query: string) => {
-    console.log(query);
     query = query.toLowerCase().trim();
     let allResults: Note[] = new Array<Note>();
     let terms: string[] = query.split(' ');
