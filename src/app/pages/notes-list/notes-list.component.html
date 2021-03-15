@@ -13,12 +13,13 @@
   <!-- /.search-bar-container -->
 
   <div class="note-list">
+    <div *ngIf="!noteCount" style="text-align:center; margin: 1rem 0">No data found!</div>
     <app-note-card
       *ngFor="let note of filteredNotes; index as i"
       [title]="note.title"
       [body]="note.body"
-      [viewLink]="i"
-      (delete)="deleteNote(i)"
+      [viewLink]="generateLink(note)"
+      (delete)="deleteNote(note)"
     >
     </app-note-card>
   </div>
